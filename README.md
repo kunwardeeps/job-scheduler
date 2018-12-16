@@ -1,6 +1,6 @@
-## Job Scheduler
+# Job Scheduler
 
-# Problem Statement
+## Problem Statement
 
 Create a job scheduler for ABC company which is building a new operating system. When the
 processor is idle, dispatch a new job such that its executed time is the least among all executed
@@ -13,7 +13,7 @@ is total_time-executed_time.
 
 All times are in milliseconds (ms).
 
-# Requirements
+## Requirements
 
 The requirements of the scheduler are:
 1. Dispatch a job with the lowest executed_time to the processor. Ties may be broken
@@ -33,7 +33,7 @@ PrintJob(jobID1,jobID2)
 NextJob(jobID)
 PreviousJob(jobID)
 
-# Implementation
+## Implementation
 
 Following data structures are implemented as part of this project to build the scheduler:
 • Red-Black Tree: The key of the red-black tree is jobId. Since jobId is unique, it will
