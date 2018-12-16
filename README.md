@@ -6,9 +6,9 @@ Create a job scheduler for ABC company which is building a new operating system.
 processor is idle, dispatch a new job such that its executed time is the least among all executed
 jobs. A job has the following fields:
 
--jobID: Unique ID for each job.
--executed_time: The amount of time for which the job has been scheduled so far.
--total_time: Total time required to complete the job. So, the remaining time to complete
+1. jobID: Unique ID for each job.
+2. executed_time: The amount of time for which the job has been scheduled so far.
+3. total_time: Total time required to complete the job. So, the remaining time to complete
 is total_time-executed_time.
 
 All times are in milliseconds (ms).
@@ -36,11 +36,11 @@ PreviousJob(jobID)
 ## Implementation
 
 Following data structures are implemented as part of this project to build the scheduler:
-• Red-Black Tree: The key of the red-black tree is jobId. Since jobId is unique, it will
+1. Red-Black Tree: The key of the red-black tree is jobId. Since jobId is unique, it will
 take O(log n) time to search a job. Red-Black tree ensures that it will remain balanced
 so there is a performance improvement as compared to using plane Binary Search Tree.
 The node also contains total_time field.
-• Min Heap: The key of Min Heap is assigned as execution time of the job. So, whenever
+2. Min Heap: The key of Min Heap is assigned as execution time of the job. So, whenever
 extractMin() is called, it will correspond to smallest execution time among all jobs.
 The nodes are designed in such a way that every Red-Black node will contain object reference
 of corresponding Min-Heap node and vice-versa. Hence, whenever there is an insert operation,
